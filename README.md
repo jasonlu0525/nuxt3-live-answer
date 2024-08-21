@@ -11,13 +11,13 @@ Node.js 版本建議為：`18.0.0` 以上
 ### 取得專案
 
 ```bash
-git clone -b day5-composable  https://github.com/jasonlu0525/nuxt3-live-answer.git
+git clone -b day5-composable  https://github.com/jasonlu0525/nuxt3-live-answer.git day5-composable
 ```
 
 ### 移動到專案內
 
 ```bash
-cd nuxt3-live-answer
+cd day5-composable
 ```
 
 ### 安裝套件
