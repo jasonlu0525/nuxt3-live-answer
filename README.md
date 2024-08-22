@@ -9,7 +9,7 @@ Node.js 版本建議為：`18.0.0` 以上
 ### 取得專案
 
 ```bash
-git clone -b day6-router origin https://github.com/jasonlu0525/nuxt3-live-answer.git day6-router-answer
+git clone -b day6-router  https://github.com/jasonlu0525/nuxt3-live-answer.git day6-router-answer
 ```
 
 ### 移動到專案內
