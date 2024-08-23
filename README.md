@@ -1,75 +1,39 @@
-# Nuxt 3 Minimal Starter
+# Day 2 - Nuxt3 專案引入 CSS 樣式 解答
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## 安裝
 
-## Setup
+以下將會引導你如何安裝此專案到你的電腦上。
 
-Make sure to install the dependencies:
+Node.js 版本建議為：`18.0.0` 以上
+
+### 取得專案
 
 ```bash
-# npm
+git clone -b day2-style  https://github.com/jasonlu0525/nuxt3-live-answer.git day2-style-answer
+```
+
+### 移動到專案內
+
+```bash
+cd day2-style-answer
+```
+
+### 安裝套件
+
+```bash
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+### 運行專案
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+### 開啟專案
 
-Build the application for production:
+在瀏覽器網址列輸入以下即可看到畫面
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+http://localhost:3000/
 ```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
