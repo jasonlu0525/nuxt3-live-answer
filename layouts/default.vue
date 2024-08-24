@@ -25,11 +25,6 @@
               >房型</NuxtLink
             >
           </li>
-          <li class="nav-item">
-            <NuxtLink class="nav-link" to="order" target="_blank"
-              >訂單</NuxtLink
-            >
-          </li>
         </ul>
       </div>
     </div>
