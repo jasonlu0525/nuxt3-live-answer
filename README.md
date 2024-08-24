@@ -9,13 +9,13 @@ Node.js 版本建議為：`18.0.0` 以上
 ### 取得專案
 
 ```bash
-git clone -b [branch]  https://github.com/jasonlu0525/nuxt3-live-answer.git [fileName]
+git clone -b day7-nested-router  https://github.com/jasonlu0525/nuxt3-live-answer.git day7-nested-router-answer
 ```
 
 ### 移動到專案內
 
 ```bash
-cd [fileName]
+cd day7-nested-router-answer
 ```
 
 ### 安裝套件
