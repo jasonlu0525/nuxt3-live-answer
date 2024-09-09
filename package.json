@@ -17,6 +17,6 @@
     "vue": "latest"
   },
   "devDependencies": {
-    "sass": "^1.70.0"
+    "sass": "1.70.0"
   }
 }
