@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+navigateTo("/room");
+</script>
 
 <template>
   <h1>首頁頁面</h1>
