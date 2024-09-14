@@ -3,8 +3,8 @@ const { $swal } = useNuxtApp();
 const router = useRouter();
 
 const userLoginObject = ref({
-  email: "0@gmail.com",
-  password: "A1111111",
+  email: "",
+  password: "",
 });
 
 const loginAccount = async (requsetBody) => {
