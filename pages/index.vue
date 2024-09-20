@@ -16,6 +16,6 @@ const time = ref(1730427600000);
 
 <style scoped>
 p {
-  font-size: 30px;
+  font-size: 20px;
 }
 </style>
