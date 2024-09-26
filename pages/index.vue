@@ -425,7 +425,7 @@ const userInfo = ref({
   email: "",
 });
 
-// 清空訂房人資訊
+// 清空訂房人資廖
 const resetUserForm = () => {
   userInfo.value = {
     address: {},
