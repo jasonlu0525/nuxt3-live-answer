@@ -1,9 +1,9 @@
-<script lang="ts" setup></script>
+<script setup></script>
 
 <template>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
-      <NuxtLink class="navbar-brand" to="/">Day19 範例</NuxtLink>
+      <NuxtLink class="navbar-brand" to="/">Day19 解答</NuxtLink>
       <button
         class="navbar-toggler"
         type="button"
@@ -18,13 +18,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <NuxtLink class="nav-link" to="/"
-              >自動匯入與 Option Store 範例
-            </NuxtLink>
+            <NuxtLink class="nav-link" to="/"> 首頁 </NuxtLink>
           </li>
-
           <li class="nav-item">
-            <NuxtLink class="nav-link" to="/todos"> todolist 範例</NuxtLink>
+            <NuxtLink class="nav-link" to="/order"> 預訂結果頁面 </NuxtLink>
           </li>
         </ul>
       </div>

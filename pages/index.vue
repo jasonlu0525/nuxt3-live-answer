@@ -1,8 +1,10 @@
 <script setup>
 const roomStore = useBookingStore();
-const { selectedRoomInfo, bookingResult } = storeToRefs(roomStore);
-const { setReservationData, createReservation } = roomStore;
+const { createReservation } = roomStore;
 
+const router = useRouter();
+
+// 原始房型資料
 const roomsList = ref([
   {
     _id: "66b0909bafe4327b9a563797",
@@ -410,6 +412,7 @@ const roomsList = ref([
   },
 ]);
 
+// 訂房人資料格式
 const userInfo = ref({
   address: {
     zipcode: 802,
@@ -422,15 +425,19 @@ const userInfo = ref({
   email: "",
 });
 
+// 清空訂房人資訊
 const resetUserForm = () => {
   userInfo.value = {
     address: {},
   };
 };
 
+// 被選取的房型
+const selectedRoomInfo = ref({});
+
 // 選取要預訂的房型
 const handleReservation = (roomInfoData) => {
-  setReservationData(roomInfoData);
+  selectedRoomInfo.value = roomInfoData;
   resetUserForm();
 };
 
@@ -442,13 +449,14 @@ const confirmOrder = (roomInfo, userInfo) => {
       ...userInfo,
     },
   });
+  router.push("/order");
 };
 </script>
 
 <template>
   <div class="container-fluid mt-5">
     <div class="row justify-content-center">
-      <div class="col-lg-4">
+      <div class="col-lg-6">
         <div
           class="card mb-3 border-0"
           :class="{ 'bg-light': room.name === selectedRoomInfo.name }"
@@ -485,7 +493,6 @@ const confirmOrder = (roomInfo, userInfo) => {
         </div>
       </div>
       <div class="col-lg-4" v-if="selectedRoomInfo._id">
-        {{ userInfo }}
         <h3 class="mb-3">訂房資訊</h3>
         <p class="fs-1">
           {{ selectedRoomInfo.name }}
@@ -541,8 +548,6 @@ const confirmOrder = (roomInfo, userInfo) => {
                   v-model="userInfo.county"
                 >
                   <option selected disabled>請選擇縣市</option>
-                  <option value="臺北市">臺北市</option>
-                  <option value="臺中市">臺中市</option>
                   <option value="高雄市">高雄市</option></select
                 ><select
                   class="form-select"
@@ -561,7 +566,7 @@ const confirmOrder = (roomInfo, userInfo) => {
                 class="form-control rounded-3"
                 placeholder="請輸入詳細地址"
                 name="road"
-                v-model="userInfo.name"
+                v-model="userInfo.detail"
               />
             </div>
           </form>
@@ -620,14 +625,6 @@ const confirmOrder = (roomInfo, userInfo) => {
         >
           確認訂房
         </button>
-      </div>
-      <div class="col-lg-4" v-if="bookingResult.name">
-        <h2 class="mb-3">預訂成功 !</h2>
-        <h3 class="mb-3">訂房人資訊</h3>
-        <h4>姓名</h4>
-        <p>{{ bookingResult.user.name }}</p>
-        <h4>手機號碼</h4>
-        <p>{{ bookingResult.user.phone }}</p>
       </div>
     </div>
   </div>
