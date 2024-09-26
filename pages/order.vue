@@ -1,4 +1,5 @@
 <script setup>
+// 1. 從 useBookingStore 取出資料 bookingResult
 const roomStore = useBookingStore();
 const { bookingResult } = storeToRefs(roomStore);
 </script>
@@ -6,6 +7,7 @@ const { bookingResult } = storeToRefs(roomStore);
 <template>
   <div class="container mt-5">
     <template v-if="bookingResult.name">
+      <!-- 2. 渲染至 HTML 模板 -->
       <div class="row">
         <div class="col-lg-4">
           <h2 class="mb-3">預訂成功 !</h2>
@@ -75,6 +77,6 @@ const { bookingResult } = storeToRefs(roomStore);
     <template v-else>
       <h1>目前沒有預訂資訊</h1>
     </template>
-    <NuxtLink class="btn btn-primary" to="/" type="button">回上一頁</NuxtLink>
+    <NuxtLink class="btn btn-primary" to="/">回上一頁</NuxtLink>
   </div>
 </template>

@@ -4,7 +4,7 @@ const { createReservation } = roomStore;
 
 const router = useRouter();
 
-// 原始房型資料
+// 房型資料列表
 const roomsList = ref([
   {
     _id: "66b0909bafe4327b9a563797",
@@ -425,7 +425,7 @@ const userInfo = ref({
   email: "",
 });
 
-// 清空訂房人資廖
+// 清空訂房人資料
 const resetUserForm = () => {
   userInfo.value = {
     address: {},
@@ -443,12 +443,16 @@ const handleReservation = (roomInfoData) => {
 
 // 建立訂單
 const confirmOrder = (roomInfo, userInfo) => {
+  // 1. 將選取的房型以及訂房人資訊整合成訂單資訊 ( bookingResult )
+  // 2. 將 bookingResult 改成用 pinia 管理狀態
   createReservation({
     ...roomInfo,
     user: {
       ...userInfo,
     },
   });
+
+  // 3. 使用 router 將頁面導引至 /order
   router.push("/order");
 };
 </script>
