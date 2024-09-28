@@ -2,11 +2,11 @@
 const router = useRouter();
 const route = useRoute();
 
-const bookingStore = useBookingStore();
-const { bookingInfo } = storeToRefs(bookingStore);
-
 const { id } = route.params;
 
+// 將房型資料 data 改成使用 Pinia 管理
+const bookingStore = useBookingStore();
+const { bookingInfo } = storeToRefs(bookingStore);
 const { error } = await useAsyncData(`room-data`, async () => {
   const response = await $fetch(`/rooms/${id}`, {
     baseURL: "https://nuxr3.zeabur.app/api/v1",
@@ -35,6 +35,7 @@ const isProvide = function (isProvideBoolean = false) {
     </button>
     <div class="row justify-content-center">
       <div class="col-lg-6">
+        <!-- 以 Pinia 的資料渲染 HTML  -->
         <div class="room-page">
           <div class="room-header">
             <h1 class="room-name">{{ bookingInfo.name }}</h1>
