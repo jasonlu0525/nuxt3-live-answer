@@ -20,6 +20,9 @@
           <li class="nav-item">
             <NuxtLink class="nav-link" to="/room">房型列表</NuxtLink>
           </li>
+          <li class="nav-item">
+            <NuxtLink class="nav-link" to="/booking">預約頁面</NuxtLink>
+          </li>
         </ul>
       </div>
     </div>
