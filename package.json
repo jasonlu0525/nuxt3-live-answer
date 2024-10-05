@@ -1,0 +1,24 @@
+{
+  "name": "day21-vee-validate-answer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@vee-validate/i18n": "^4.13.2",
+    "@vee-validate/nuxt": "^4.13.2",
+    "@vee-validate/rules": "^4.13.2",
+    "bootstrap": "^5.3.3",
+    "nuxt": "3.12.4",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "sass": "1.70"
+  }
+}
