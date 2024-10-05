@@ -6,7 +6,7 @@ const confirmReservation = () => {
 };
 
 const onSubmit = (value, { resetForm }) => {
-  console.log(value);
+  console.log("送出的值:", value);
   alert("送出訂房!");
   resetForm();
 };
@@ -18,10 +18,7 @@ const onSubmit = (value, { resetForm }) => {
       <div class="col-md-7">
         <section>
           <h2 class="mb-4 fw-bold">訂房人資訊</h2>
-          <Form
-            @submit="onSubmit"
-            v-slot="{ errors }"
-          >
+          <Form @submit="onSubmit" v-slot="{ errors }">
             <div class="mb-4">
               <label for="name" class="form-label fw-bold">姓名</label>
               <Field
