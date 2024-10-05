@@ -21,7 +21,6 @@ const onSubmit = (value, { resetForm }) => {
           <Form
             @submit="onSubmit"
             v-slot="{ errors }"
-            class="d-flex flex-column gap-6"
           >
             <div class="mb-4">
               <label for="name" class="form-label fw-bold">姓名</label>
