@@ -5,7 +5,7 @@ const confirmReservation = () => {
   submitButtonRef.value.click();
 };
 
-const onSubmit = (value, { resetForm }) => {
+const onSubmit = (value = {}, { resetForm }) => {
   console.log("送出的值:", value);
   alert("送出訂房!");
   resetForm();
