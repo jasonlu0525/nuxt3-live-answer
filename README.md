@@ -8,14 +8,15 @@ Node.js 版本建議為：`18.0.0` 以上
 
 ### 取得專案
 
-````bash
+```bash
 git clone -b day24-booking  https://github.com/jasonlu0525/nuxt3-live-answer.git day24-booking-answer
+```
 
 ### 移動到專案內
 
 ```bash
 cd day24-booking-answer
-````
+```
 
 ### 安裝套件
 
