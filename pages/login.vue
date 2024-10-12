@@ -1,5 +1,6 @@
 <script setup>
 const isFetch = ref(false);
+const router = useRouter();
 
 const loginAccount = async (userData) => {
   const accountToken = useCookie("accountToken");

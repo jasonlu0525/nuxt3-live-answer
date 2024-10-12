@@ -7,7 +7,7 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
   }
   const { data, errors } = await useFetch("/v1/user/check", {
     baseURL: "https://nuxr3.zeabur.app",
-    method: "POST",
+    method: "GET",
     headers: {
       Authorization: token.value,
     },
