@@ -4,7 +4,7 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
   if (!token.value) {
     return navigateTo("/login");
   }
-  const { data, errors } = await useFetch("/api/v1/user/check", {
+  const { error } = await useFetch("/api/v1/user/check", {
     baseURL: "https://nuxr3.zeabur.app",
     method: "GET",
     headers: {
@@ -12,7 +12,7 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
     },
   });
 
-  if (errors?.value) {
+  if (error?.value) {
     alert("請先登入");
     return navigateTo("/login");
   }
