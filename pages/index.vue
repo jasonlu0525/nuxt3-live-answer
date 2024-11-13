@@ -1,14 +1,14 @@
 <script setup>
-import { useLoading } from "vue-loading-overlay";
+const { $useLoading } = useNuxtApp();
 
-const $loading = useLoading({
+const loadingHandler = $useLoading({
   backgroundColor: "green",
   loader: "dots",
   "is-full-page": false,
 });
 
 function openLoading() {
-  const loader = $loading.show();
+  const loader = loadingHandler.show();
   setTimeout(() => {
     loader.hide();
   }, 1000);
